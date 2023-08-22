@@ -315,11 +315,10 @@ const bookmarks = [
   }
 ];
 
-class VDOMNode {
-}
+class VDOMNode {}
 
 class VDOMElement extends VDOMNode {
-  constructor(tagName, attributes = {}, ...children) {
+  constructor(tagName, attributes = {}, children) {
     super();
 
     this.tagName = tagName;
@@ -343,7 +342,7 @@ class VDOMElement extends VDOMNode {
 }
 
 class VDOMFragment extends VDOMNode {
-  constructor(...children) {
+  constructor(children) {
     super();
 
     this.children = children;
@@ -372,34 +371,48 @@ class VDOMTextNode extends VDOMNode {
   }
 }
 
-function select(selector, context = document) {
-  return context.querySelector(selector);
+class VDOMComponent extends VDOMNode {
+  constructor(component, props = {}, children) {
+    super();
+
+    this.component = component;
+    this.props = props;
+    this.children = children;
+  }
+
+  render() {
+    const element = this.component.call(null, {
+      children: this.children,
+      ...this.props
+    });
+
+    return element.render();
+  }
 }
 
-const $ = new Proxy(select, {
+const vdom = {
+  el: (component, props = {}, ...children) => new VDOMComponent(component, props, children),
+  text: (text) => new VDOMTextNode(text),
+  fragment: (...children) => new VDOMFragment(children),
+};
+
+const $ = new Proxy(vdom, {
   get(target, name) {
     if (name in target) {
       return target[name];
     }
 
-    return (...args) => new VDOMElement(name, ...args);
+    return (attributes = {}, ...children) => new VDOMElement(name, attributes, children);
   }
 });
 
-$.text     = (text)        => new VDOMTextNode(text);
-$.fragment = (...children) => new VDOMFragment(...children);
-
-const Section = (section) =>
+const Section = ({ section, children }) =>
   $.section({ id: section.id },
     $.h1({}, $.text(section.title)),
-    ...section.bookmarks.map(bookmark =>
-      bookmark.type === 'spacer'
-        ? Spacer()
-        : Bookmark(bookmark)
-    )
+    ...children
   );
 
-const Bookmark = (bookmark) =>
+const Bookmark = ({ bookmark }) =>
   $.a({ href: bookmark.url },
     $.img({ src: bookmark.favicon, alt: bookmark.name }),
       $.span({}, $.text(bookmark.name)),
@@ -407,24 +420,39 @@ const Bookmark = (bookmark) =>
 
 const Spacer = () => $.a({ class: 'spacer' });
 
-const Bookmarks = (sections) =>
+const Bookmarks = ({ sections }) =>
   $.div({ id: 'bookmarks'},
     $.div({ class: 'left' },
       ...sections
         .filter(section => section.side === 'left')
-        .map(Section)
+        .map(section =>
+          $.el(Section, { section },
+            ...section.bookmarks.map(bookmark =>
+              bookmark.type === 'spacer'
+                ? $.el(Spacer)
+                : $.el(Bookmark, { bookmark })
+            )
+          )
+        )
     ),
     $.div({ class: 'right' },
       ...sections
         .filter(section => section.side === 'right')
-        .map(Section)
+        .map(section =>
+          $.el(Section, { section },
+            ...section.bookmarks.map(bookmark =>
+              bookmark.type === 'spacer'
+                ? $.el(Spacer)
+                : $.el(Bookmark, { bookmark })
+            )
+          )
+        )
     )
   );
 
-const render = (container, component) => {
-  let element = component.render();
-
+const render = (container, vdom) => {
+  let node = vdom.render();
   window.requestAnimationFrame(() => {
-    container.replaceChildren(element);
+    container.replaceChildren(node);
   });
 };
