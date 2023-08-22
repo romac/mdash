@@ -372,7 +372,7 @@ const renderSpacer = () =>
   $.a({ class: 'spacer' });
 
 const renderBookmarks = (sections, container) => {
-  container.appendChild($.fragment(
+  let fragment = $.fragment(
     $.div({ class: 'left' },
       ...sections
         .filter(section => section.side === 'left')
@@ -383,5 +383,9 @@ const renderBookmarks = (sections, container) => {
         .filter(section => section.side === 'right')
         .map(renderSection)
     )
-  ));
+  );
+
+  window.requestAnimationFrame(() => {
+    container.replaceChildren(fragment);
+  });
 }
