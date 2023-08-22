@@ -408,7 +408,7 @@ const Bookmark = (bookmark) =>
 const Spacer = () => $.a({ class: 'spacer' });
 
 const Bookmarks = (sections) =>
-  $.fragment(
+  $.div({ id: 'bookmarks'},
     $.div({ class: 'left' },
       ...sections
         .filter(section => section.side === 'left')
