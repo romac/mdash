@@ -1,0 +1,116 @@
+
+body {
+    background:                #efefef;
+    font-family:                -apple-system, Helvetica, Arial, sans-serif;
+    color:                      #365aba;
+    margin:                     0px 0px 0px 0px;
+    padding:                    0px 0px 0px 20px;
+    zoom:                       87%;
+}
+
+body.large  { font-size:         16px; }
+body.medium { font-size:         14px; }
+body.small  { font-size:         12px; }
+
+a, a:hover {
+    color:                      #365aba;
+    text-decoration:            none;
+}
+
+#bookmarks > div {
+    width:                      48%;
+    margin:                     0px 0px 30px 0px;
+    padding:                    0;
+}
+
+#bookmarks > .left {
+    float:                      left;
+}
+
+#bookmarks > .right {
+    float:                      right;
+}
+
+#bookmarks section {
+    clear:                      both;
+    padding:                    8px 0px 0px 0px;
+    height:                     auto;
+    overflow:                   hidden;
+}
+
+#bookmarks h1 {
+    font-size:                  0.9em;
+    color:                      #666;
+    font-weight:                bold;
+    padding-left:               8px;
+}
+
+#bookmarks a {
+    position:                   relative;
+    display:                    inline-block;
+    vertical-align:             bottom;
+    text-decoration:            none;
+    font-size:                  0.9em;
+    font-weight:                normal;
+    letter-spacing:             0.02em;
+    line-height:                1.4;
+    background-color:           #FFF;
+    border-radius:              6px 6px 6px 6px;
+    box-shadow:                 0 1px 3px #CCC;
+    width:                      9.5em;
+    height:                     4em;
+    padding:                    10px 5px 5px 9px;
+    margin:                     2px 6px 6px 2px;
+    overflow:                   hidden;
+    text-overflow:              ellipsis;
+    position:                   relative;
+}
+
+#bookmarks a:hover {
+    background-color:           #FFDBA9;
+}
+
+#bookmarks a > img {
+    display:                    inline-block;
+    line-height:                20px;
+    margin-right:               7px;
+    margin-bottom:              -3px;
+    width:                      1.15em;
+}
+
+#bookmarks a.spacer {
+  visibility:                   hidden;
+  display:                      block;
+  height:                       0;
+  margin:                       0;
+  padding:                      0;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background:                 rgb(50, 50, 50);
+    color:                      #999;
+  }
+
+  a, a:hover {
+    color:                      #DDD;
+  }
+
+  #getstarted > section {
+    background-color:           #FFF;
+  }
+
+  #bookmarks h1 {
+    font-size:                  0.9em;
+    color:                      #AAA;
+  }
+
+  #bookmarks a {
+    background-color:           rgb(70, 70, 70);
+    box-shadow:                 0 1px 3px #333;
+  }
+
+  #bookmarks a:hover {
+    background-color:           rgb(100, 100, 100);
+  }
+}
