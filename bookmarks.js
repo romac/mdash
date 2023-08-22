@@ -315,77 +315,116 @@ const bookmarks = [
   }
 ];
 
+class VDOMNode {
+}
+
+class VDOMElement extends VDOMNode {
+  constructor(tagName, attributes = {}, ...children) {
+    super();
+
+    this.tagName = tagName;
+    this.attributes = attributes;
+    this.children = children;
+  }
+
+  render() {
+    const element = document.createElement(this.tagName);
+
+    for (const [key, value] of Object.entries(this.attributes)) {
+      element.setAttribute(key, value);
+    }
+
+    for (const child of this.children) {
+      element.appendChild(child.render());
+    }
+
+    return element;
+  }
+}
+
+class VDOMFragment extends VDOMNode {
+  constructor(...children) {
+    super();
+
+    this.children = children;
+  }
+
+  render() {
+    const fragment = document.createDocumentFragment();
+
+    for (const child of this.children) {
+      fragment.appendChild(child.render());
+    }
+
+    return fragment;
+  }
+}
+
+class VDOMTextNode extends VDOMNode {
+  constructor(text) {
+    super();
+
+    this.text = text;
+  }
+
+  render() {
+    return document.createTextNode(this.text);
+  }
+}
+
 function select(selector, context = document) {
   return context.querySelector(selector);
 }
 
-function element(tagName, attributes = {}, ...children) {
-  const element = tagName === 'fragment'
-    ? document.createDocumentFragment()
-    : document.createElement(tagName);
-
-  for (const [key, value] of Object.entries(attributes)) {
-    element.setAttribute(key, value);
-  }
-
-  for (const child of children) {
-    if (typeof child === 'string') {
-      element.appendChild(document.createTextNode(child));
-    } else if (child instanceof Node) {
-      element.appendChild(child);
-    } else {
-      throw new Error('Invalid child: ' + typeof child);
-    }
-  }
-
-  return element;
-}
-
 const $ = new Proxy(select, {
   get(target, name) {
-    if (name === 'fragment') {
-      return (...args) => element('fragment', {}, ...args);
+    if (name in target) {
+      return target[name];
     }
-    else {
-      return (...args) => element(name, ...args);
-    }
+
+    return (...args) => new VDOMElement(name, ...args);
   }
 });
 
-const renderSection = (section) =>
+$.text     = (text)        => new VDOMTextNode(text);
+$.fragment = (...children) => new VDOMFragment(...children);
+
+const Section = (section) =>
   $.section({ id: section.id },
-    $.h1({}, section.title),
+    $.h1({}, $.text(section.title)),
     ...section.bookmarks.map(bookmark =>
       bookmark.type === 'spacer'
-        ? renderSpacer()
-        : renderBookmark(bookmark)
+        ? Spacer()
+        : Bookmark(bookmark)
     )
   );
 
-const renderBookmark = (bookmark) =>
+const Bookmark = (bookmark) =>
   $.a({ href: bookmark.url },
     $.img({ src: bookmark.favicon, alt: bookmark.name }),
-      $.span({}, bookmark.name),
+      $.span({}, $.text(bookmark.name)),
   );
 
-const renderSpacer = () =>
-  $.a({ class: 'spacer' });
+const Spacer = () => $.a({ class: 'spacer' });
 
-const renderBookmarks = (sections, container) => {
-  let fragment = $.fragment(
+const Bookmarks = (sections) =>
+  $.fragment(
     $.div({ class: 'left' },
       ...sections
         .filter(section => section.side === 'left')
-        .map(renderSection)
+        .map(Section)
     ),
     $.div({ class: 'right' },
       ...sections
         .filter(section => section.side === 'right')
-        .map(renderSection)
+        .map(Section)
     )
   );
 
+const render = (container, component) => {
+  let element = component.render();
+
   window.requestAnimationFrame(() => {
-    container.replaceChildren(fragment);
+    container.replaceChildren(element);
   });
-}
+};
