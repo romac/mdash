@@ -4,83 +4,6 @@ const spacer = {
 
 const bookmarks = [
   {
-    id: 'hermes',
-    side: 'left',
-    title: 'Hermes',
-    bookmarks: [
-      {
-        name: 'Code',
-        url: 'https://github.com/informalsystems/hermes',
-        favicon: 'img/favicons_053.png'
-      },
-      {
-        name: 'Issues',
-        url: 'https://github.com/informalsystems/hermes/issues',
-        favicon: 'img/favicons_053.png'
-      },
-      {
-        name: 'Pull Requests',
-        url: 'https://github.com/informalsystems/hermes/pulls',
-        favicon: 'img/favicons_053.png'
-      }
-    ],
-  },
-  {
-    id: 'cosmos',
-    side: 'left',
-    title: 'Cosmos',
-    bookmarks: [
-      {
-        name: 'ibc-rs',
-        url: 'https://github.com/cosmos/ibc-rs',
-        favicon: 'img/favicons_053.png'
-      },
-      {
-        name: 'ibc-proto-rs',
-        url: 'https://github.com/cosmos/ibc-proto-rs',
-        favicon: 'img/favicons_053.png'
-      },
-      {
-        name: 'tendermint-rs',
-        url: 'https://github.com/informalsystems/tendermint-rs',
-        favicon: 'img/favicons_053.png'
-      },
-      spacer,
-      {
-        name: 'ics23',
-        url: 'https://github.com/cosmos/ics23',
-        favicon: 'img/favicons_053.png'
-      },
-      {
-        name: 'cosmos.nix',
-        url: 'https://github.com/informalsystems/cosmos.nix',
-        favicon: 'img/favicons_053.png'
-      }
-    ]
-  },
-  {
-    id: 'epfl-lara',
-    side: 'left',
-    title: 'EPFL LARA',
-    bookmarks: [
-      {
-        name: 'Stainless',
-        url: 'https://github.com/epfl-lara/stainless',
-        favicon: 'img/favicons_053.png'
-      },
-      {
-        name: 'Noxt',
-        url: 'https://github.com/epfl-lara/rust-stainless',
-        favicon: 'img/favicons_053.png'
-      },
-      {
-        name: 'Inox',
-        url: 'https://github.com/epfl-lara/inox',
-        favicon: 'img/favicons_053.png'
-      }
-    ]
-  },
-  {
     id: 'social',
     side: 'left',
     title: 'Social',
@@ -113,36 +36,134 @@ const bookmarks = [
         favicon: 'img/favicons_014.png'
       },
       {
+        name: 'Reddit',
+        url: 'https://www.reddit.com/r/haskell+purescript+rust+scala/',
+        favicon: 'img/favicons_035.png'
+      },
+      {
         name: 'Lambda the Ultimate',
         url: 'http://lambda-the-ultimate.org/',
         favicon: 'img/favicons_030.png'
       },
+      spacer,
       {
-        name: 'Reddit',
-        url: 'https://www.reddit.com/r/haskell+purescript+rust+scala/',
-        favicon: 'img/favicons_035.png'
+        name: 'Paged Out!',
+        url: 'https://pagedout.institute/',
+        favicon: 'img/pagedout.ico',
+      },
+      {
+        name: 'C-ACM',
+        url: 'https://m-cacm.acm.org',
+        favicon: 'img/cacm.ico'
       }
     ]
   },
   {
-    id: 'crypto',
+    id: 'hermes',
     side: 'left',
-    title: 'Crypto',
+    title: 'Hermes',
     bookmarks: [
       {
-        name: 'Coindesk',
-        url: 'https://www.coindesk.com',
-        favicon: 'img/coindesk.ico'
+        name: 'Code',
+        url: 'https://github.com/informalsystems/hermes',
+        favicon: 'img/favicons_053.png'
       },
       {
-        name: 'CoinMarketCap',
-        url: 'https://coinmarketcap.com',
-        favicon: 'img/coinmarketcap.ico'
+        name: 'Issues',
+        url: 'https://github.com/informalsystems/hermes/issues',
+        favicon: 'img/favicons_053.png'
       },
       {
-        name: 'Map of Zones',
-        url: 'https://mapofzones.com',
-        favicon: 'img/mapofzones.ico'
+        name: 'Pull Requests',
+        url: 'https://github.com/informalsystems/hermes/pulls',
+        favicon: 'img/favicons_053.png'
+      }
+    ],
+  },
+  {
+    id: 'malachite',
+    side: 'left',
+    title: 'Malachite',
+    bookmarks: [
+      {
+        name: 'malachite',
+        url: 'https://github.com/informalsystems/malachite',
+        favicon: 'img/favicons_053.png'
+      },
+      {
+        name: 'itf-rs',
+        url: 'https://github.com/informalsystems/itf-rs',
+        favicon: 'img/favicons_053.png'
+      },
+      {
+        name: 'quint',
+        url: 'https://github.com/informalsystems/quint',
+        favicon: 'img/favicons_053.png'
+      },
+    ]
+  },
+  {
+    id: 'cosmos',
+    side: 'left',
+    title: 'Cosmos',
+    bookmarks: [
+      {
+        name: 'ibc-rs',
+        url: 'https://github.com/cosmos/ibc-rs',
+        favicon: 'img/favicons_053.png'
+      },
+      {
+        name: 'ibc-proto-rs',
+        url: 'https://github.com/cosmos/ibc-proto-rs',
+        favicon: 'img/favicons_053.png'
+      },
+      {
+        name: 'tendermint-rs',
+        url: 'https://github.com/informalsystems/tendermint-rs',
+        favicon: 'img/favicons_053.png'
+      },
+      spacer,
+      {
+        name: 'ics23',
+        url: 'https://github.com/cosmos/ics23',
+        favicon: 'img/favicons_053.png'
+      },
+      {
+        name: 'cosmos.nix',
+        url: 'https://github.com/informalsystems/cosmos.nix',
+        favicon: 'img/favicons_053.png'
+      },
+      // {
+      //   name: 'piwasm',
+      //   url: 'https://github.com/p-offtermatt/piwasm',
+      //   favicon: 'img/favicons_053.png'
+      // },
+      {
+        name: 'chainpulse',
+        url: 'https://github.com/informalsystems/chainpulse-internal',
+        favicon: 'img/favicons_053.png'
+      },
+    ]
+  },
+  {
+    id: 'epfl-lara',
+    side: 'left',
+    title: 'EPFL LARA',
+    bookmarks: [
+      {
+        name: 'Stainless',
+        url: 'https://github.com/epfl-lara/stainless',
+        favicon: 'img/favicons_053.png'
+      },
+      {
+        name: 'Noxt',
+        url: 'https://github.com/epfl-lara/rust-stainless',
+        favicon: 'img/favicons_053.png'
+      },
+      {
+        name: 'Inox',
+        url: 'https://github.com/epfl-lara/inox',
+        favicon: 'img/favicons_053.png'
       }
     ]
   },
@@ -312,10 +333,32 @@ const bookmarks = [
         favicon: 'img/favicons_037.png'
       }
     ]
-  }
+  },
+  {
+    id: 'crypto',
+    side: 'right',
+    title: 'Crypto',
+    bookmarks: [
+      {
+        name: 'Coindesk',
+        url: 'https://www.coindesk.com',
+        favicon: 'img/coindesk.ico'
+      },
+      {
+        name: 'CoinMarketCap',
+        url: 'https://coinmarketcap.com',
+        favicon: 'img/coinmarketcap.ico'
+      },
+      {
+        name: 'Map of Zones',
+        url: 'https://mapofzones.com',
+        favicon: 'img/mapofzones.ico'
+      }
+    ]
+  },
 ];
 
-class VDOMNode {}
+class VDOMNode { }
 
 class VDOMElement extends VDOMNode {
   constructor(tagName, attributes = {}, children) {
@@ -415,13 +458,13 @@ const Section = ({ section, children }) =>
 const Bookmark = ({ bookmark }) =>
   $.a({ href: bookmark.url },
     $.img({ src: bookmark.favicon, alt: bookmark.name }),
-      $.span({}, $.text(bookmark.name)),
+    $.span({}, $.text(bookmark.name)),
   );
 
 const Spacer = () => $.a({ class: 'spacer' });
 
 const Bookmarks = ({ sections }) =>
-  $.div({ id: 'bookmarks'},
+  $.div({ id: 'bookmarks' },
     $.div({ class: 'left' },
       ...sections
         .filter(section => section.side === 'left')
