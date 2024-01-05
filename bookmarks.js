@@ -15,7 +15,7 @@ const bookmarks = [
       },
       {
         name: 'reddit',
-        url: 'https://reddit.com/r/all',
+        url: 'https://old.reddit.com/r/all',
         favicon: 'img/favicons_016.png'
       },
       {
@@ -37,7 +37,7 @@ const bookmarks = [
       },
       {
         name: 'Reddit',
-        url: 'https://www.reddit.com/r/haskell+purescript+rust+scala/',
+        url: 'https://old.reddit.com/r/haskell+purescript+rust+scala/',
         favicon: 'img/favicons_035.png'
       },
       {
@@ -45,17 +45,6 @@ const bookmarks = [
         url: 'http://lambda-the-ultimate.org/',
         favicon: 'img/favicons_030.png'
       },
-      spacer,
-      {
-        name: 'Paged Out!',
-        url: 'https://pagedout.institute/',
-        favicon: 'img/pagedout.ico',
-      },
-      {
-        name: 'C-ACM',
-        url: 'https://m-cacm.acm.org',
-        favicon: 'img/cacm.ico'
-      }
     ]
   },
   {
@@ -335,27 +324,44 @@ const bookmarks = [
     ]
   },
   {
-    id: 'crypto',
+    id: 'magazines',
     side: 'right',
-    title: 'Crypto',
+    title: 'Magazines',
     bookmarks: [
       {
-        name: 'Coindesk',
-        url: 'https://www.coindesk.com',
-        favicon: 'img/coindesk.ico'
+        name: 'Paged Out!',
+        url: 'https://pagedout.institute/',
+        favicon: 'img/pagedout.ico',
       },
       {
-        name: 'CoinMarketCap',
-        url: 'https://coinmarketcap.com',
-        favicon: 'img/coinmarketcap.ico'
-      },
-      {
-        name: 'Map of Zones',
-        url: 'https://mapofzones.com',
-        favicon: 'img/mapofzones.ico'
+        name: 'C-ACM',
+        url: 'https://m-cacm.acm.org',
+        favicon: 'img/cacm.ico'
       }
     ]
   },
+  // {
+  //   id: 'crypto',
+  //   side: 'right',
+  //   title: 'Crypto',
+  //   bookmarks: [
+  //     {
+  //       name: 'Coindesk',
+  //       url: 'https://www.coindesk.com',
+  //       favicon: 'img/coindesk.ico'
+  //     },
+  //     {
+  //       name: 'CoinMarketCap',
+  //       url: 'https://coinmarketcap.com',
+  //       favicon: 'img/coinmarketcap.ico'
+  //     },
+  //     {
+  //       name: 'Map of Zones',
+  //       url: 'https://mapofzones.com',
+  //       favicon: 'img/mapofzones.ico'
+  //     }
+  //   ]
+  // },
 ];
 
 class VDOMNode { }
