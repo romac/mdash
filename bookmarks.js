@@ -37,7 +37,7 @@ const bookmarks = [
       },
       {
         name: 'Reddit',
-        url: 'https://old.reddit.com/r/haskell+purescript+rust+scala/',
+        url: 'https://old.reddit.com/r/haskell+purescript+rust+scala+gleamlang/',
         favicon: 'img/favicons_035.png'
       },
       {
