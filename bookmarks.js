@@ -77,26 +77,26 @@ const bookmarks = [
       },
     ],
   },
-  github("hermes", "Hermes", "informalsystems/hermes"),
+  // github("hermes", "Hermes", "informalsystems/hermes"),
   github("malachite", "Malachite", "informalsystems/malachite"),
   {
-    id: "informal",
+    id: "hermes",
     side: "left",
-    title: "Informal",
+    title: "Hermes",
     bookmarks: [
+      {
+        name: "hermes",
+        url: "https://github.com/informalsystems/hermes",
+        favicon: "img/favicons_053.png",
+      },
       {
         name: "tendermint-rs",
         url: "https://github.com/informalsystems/tendermint-rs",
         favicon: "img/favicons_053.png",
       },
       {
-        name: "itf-rs",
-        url: "https://github.com/informalsystems/itf-rs",
-        favicon: "img/favicons_053.png",
-      },
-      {
-        name: "quint",
-        url: "https://github.com/informalsystems/quint",
+        name: "ibc-proto-rs",
+        url: "https://github.com/cosmos/ibc-proto-rs",
         favicon: "img/favicons_053.png",
       },
     ],
@@ -107,29 +107,29 @@ const bookmarks = [
     title: "Cosmos",
     bookmarks: [
       {
+        name: "quint",
+        url: "https://github.com/informalsystems/quint",
+        favicon: "img/favicons_053.png",
+      },
+      {
+        name: "itf-rs",
+        url: "https://github.com/informalsystems/itf-rs",
+        favicon: "img/favicons_053.png",
+      },
+      {
         name: "ibc-rs",
         url: "https://github.com/cosmos/ibc-rs",
         favicon: "img/favicons_053.png",
       },
-      {
-        name: "ibc-proto-rs",
-        url: "https://github.com/cosmos/ibc-proto-rs",
-        favicon: "img/favicons_053.png",
-      },
+      spacer,
       {
         name: "ics23",
         url: "https://github.com/cosmos/ics23",
         favicon: "img/favicons_053.png",
       },
-      spacer,
       {
         name: "cosmos.nix",
         url: "https://github.com/informalsystems/cosmos.nix",
-        favicon: "img/favicons_053.png",
-      },
-      {
-        name: "chainpulse",
-        url: "https://github.com/informalsystems/chainpulse-internal",
         favicon: "img/favicons_053.png",
       },
       {
