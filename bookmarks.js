@@ -11,17 +11,17 @@ function github(id, title, repo) {
       {
         name: "Code",
         url: `https://github.com/${repo}`,
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
       {
         name: "Issues",
         url: `https://github.com/${repo}/issues`,
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
       {
         name: "Pull Requests",
         url: `https://github.com/${repo}/pulls`,
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
     ],
   };
@@ -33,15 +33,15 @@ const bookmarks = [
     side: "left",
     title: "Social",
     bookmarks: [
-      // {
-      //   name: 'Glance',
-      //   url: 'http://glance.pi.local',
-      //   favicon: 'img/favicons_053.png'
-      // },
+      {
+        name: "Glance",
+        url: "http://glance.pi.local",
+        favicon: "img/glance.png",
+      },
       {
         name: "GitHub",
         url: "https://github.com/",
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
       {
         name: "reddit",
@@ -71,9 +71,9 @@ const bookmarks = [
         favicon: "img/favicons_035.png",
       },
       {
-        name: "Lambda the Ultimate",
-        url: "http://lambda-the-ultimate.org/",
-        favicon: "img/favicons_030.png",
+        name: "Product Hunt",
+        url: "http://www.producthunt.com/",
+        favicon: "img/favicons_019.png",
       },
     ],
   },
@@ -87,17 +87,17 @@ const bookmarks = [
       {
         name: "hermes",
         url: "https://github.com/informalsystems/hermes",
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
       {
         name: "tendermint-rs",
         url: "https://github.com/informalsystems/tendermint-rs",
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
       {
         name: "ibc-proto-rs",
         url: "https://github.com/cosmos/ibc-proto-rs",
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
     ],
   },
@@ -109,33 +109,33 @@ const bookmarks = [
       {
         name: "quint",
         url: "https://github.com/informalsystems/quint",
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
       {
         name: "itf-rs",
         url: "https://github.com/informalsystems/itf-rs",
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
       {
         name: "ibc-rs",
         url: "https://github.com/cosmos/ibc-rs",
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
       spacer,
       {
         name: "ics23",
         url: "https://github.com/cosmos/ics23",
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
       {
         name: "cosmos.nix",
         url: "https://github.com/informalsystems/cosmos.nix",
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
       {
         name: "cometbft-rs",
         url: "https://github.com/cometbft/cometbft-rs",
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
     ],
   },
@@ -147,17 +147,17 @@ const bookmarks = [
       {
         name: "Stainless",
         url: "https://github.com/epfl-lara/stainless",
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
       {
         name: "Noxt",
         url: "https://github.com/epfl-lara/rust-stainless",
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
       {
         name: "Inox",
         url: "https://github.com/epfl-lara/inox",
-        favicon: "img/favicons_053.png",
+        favicon: "img/github.png",
       },
     ],
   },
@@ -167,35 +167,14 @@ const bookmarks = [
     title: "Music",
     bookmarks: [
       {
-        name: "SoundCloud",
-        url: "https://soundcloud.com/dashboard",
-        favicon: "img/favicons_042.png",
-      },
-      {
-        name: "Ad Noiseam",
-        url: "http://www.adnoiseam.net/",
-        favicon: "img/favicons_057.png",
-      },
-      {
         name: "You are listening to",
         url: "http://youarelistening.to/losangeles",
         favicon: "img/favicons_047.png",
       },
       {
-        name: "FACT",
-        url: "http://www.factmag.com/",
-        favicon: "img/favicons_060.png",
-      },
-      spacer,
-      {
         name: "XLR8R",
         url: "http://www.xlr8r.com/",
         favicon: "img/favicons_002.png",
-      },
-      {
-        name: "echospace",
-        url: "https://echospacedetroit.bandcamp.com/",
-        favicon: "img/favicons_045.png",
       },
       {
         name: "Mixcloud",
@@ -242,40 +221,30 @@ const bookmarks = [
     title: "News",
     bookmarks: [
       {
+        name: "RTS",
+        url: "https://www.rts.ch/",
+        favicon: "img/rts.ico",
+      },
+      {
         name: "Quartz",
         url: "http://qz.com/",
         favicon: "img/favicons_012.png",
       },
       {
-        name: "The Economist",
-        url: "http://www.economist.com/",
-        favicon: "img/favicons_025.png",
-      },
-      {
-        name: "Co.Design",
-        url: "http://www.fastcodesign.com/",
-        favicon: "img/favicons_054.png",
-      },
-      {
-        name: "The Intercept",
-        url: "https://firstlook.org/theintercept/",
-        favicon: "img/favicons_031.png",
-      },
-      spacer,
-      {
         name: "New Republic",
         url: "http://www.newrepublic.com/",
         favicon: "img/favicons_049.png",
       },
+      spacer,
       {
-        name: "Product Hunt",
-        url: "http://www.producthunt.com/",
-        favicon: "img/favicons_019.png",
+        name: "WSJ",
+        url: "http://www.wsj.com/",
+        favicon: "img/wsj.svg",
       },
       {
-        name: "Aeon",
-        url: "http://aeon.co/",
-        favicon: "img/favicons_051.png",
+        name: "The Economist",
+        url: "http://www.economist.com/",
+        favicon: "img/favicons_025.png",
       },
     ],
   },
@@ -307,6 +276,28 @@ const bookmarks = [
     ],
   },
   {
+    id: "magazines",
+    side: "right",
+    title: "Magazines",
+    bookmarks: [
+      {
+        name: "Paged Out!",
+        url: "https://pagedout.institute/",
+        favicon: "img/pagedout.ico",
+      },
+      {
+        name: "C-ACM",
+        url: "https://m-cacm.acm.org",
+        favicon: "img/cacm.ico",
+      },
+      {
+        name: "Aeon",
+        url: "http://aeon.co/",
+        favicon: "img/favicons_051.png",
+      },
+    ],
+  },
+  {
     id: "fashion",
     side: "right",
     title: "Fashion",
@@ -325,23 +316,6 @@ const bookmarks = [
         name: "MKI Store",
         url: "http://mkistore.co.uk/product_list.php",
         favicon: "img/favicons_037.png",
-      },
-    ],
-  },
-  {
-    id: "magazines",
-    side: "right",
-    title: "Magazines",
-    bookmarks: [
-      {
-        name: "Paged Out!",
-        url: "https://pagedout.institute/",
-        favicon: "img/pagedout.ico",
-      },
-      {
-        name: "C-ACM",
-        url: "https://m-cacm.acm.org",
-        favicon: "img/cacm.ico",
       },
     ],
   },
@@ -369,7 +343,7 @@ const bookmarks = [
   // },
 ];
 
-class VDOMNode {}
+class VDOMNode { }
 
 class VDOMElement extends VDOMNode {
   constructor(tagName, attributes = {}, children) {
