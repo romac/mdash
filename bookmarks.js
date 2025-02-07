@@ -29,29 +29,24 @@ function github(id, title, repo) {
 
 const bookmarks = [
   {
-    id: "social",
+    id: "home",
     side: "left",
-    title: "Social",
+    title: "Home",
     bookmarks: [
-      {
-        name: "Glance",
-        url: "http://glance.pi.local",
-        favicon: "img/glance.png",
-      },
       {
         name: "GitHub",
         url: "https://github.com/",
         favicon: "img/github.png",
       },
       {
-        name: "reddit",
+        name: "Reddit",
         url: "https://old.reddit.com/r/all",
         favicon: "img/favicons_016.png",
       },
       {
-        name: "Twitter",
-        url: "https://mobile.twitter.com/home",
-        favicon: "img/favicons_038.png",
+        name: "Glance",
+        url: "http://glance.pi.local",
+        favicon: "img/glance.png",
       },
     ],
   },
@@ -71,14 +66,19 @@ const bookmarks = [
         favicon: "img/favicons_035.png",
       },
       {
-        name: "Product Hunt",
-        url: "http://www.producthunt.com/",
-        favicon: "img/favicons_019.png",
+        name: "Lobste.rs",
+        url: "https://lobste.rs",
+        favicon: "img/lobsters.ico",
       },
     ],
   },
   // github("hermes", "Hermes", "informalsystems/hermes"),
   github("malachite", "Malachite", "informalsystems/malachite"),
+  github(
+    "quint-simulator",
+    "Quint Simulator",
+    "informalsystems/quint-simulator",
+  ),
   {
     id: "hermes",
     side: "left",
@@ -139,28 +139,28 @@ const bookmarks = [
       },
     ],
   },
-  {
-    id: "epfl-lara",
-    side: "left",
-    title: "EPFL LARA",
-    bookmarks: [
-      {
-        name: "Stainless",
-        url: "https://github.com/epfl-lara/stainless",
-        favicon: "img/github.png",
-      },
-      {
-        name: "Noxt",
-        url: "https://github.com/epfl-lara/rust-stainless",
-        favicon: "img/github.png",
-      },
-      {
-        name: "Inox",
-        url: "https://github.com/epfl-lara/inox",
-        favicon: "img/github.png",
-      },
-    ],
-  },
+  // {
+  //   id: "epfl-lara",
+  //   side: "left",
+  //   title: "EPFL LARA",
+  //   bookmarks: [
+  //     {
+  //       name: "Stainless",
+  //       url: "https://github.com/epfl-lara/stainless",
+  //       favicon: "img/github.png",
+  //     },
+  //     {
+  //       name: "Noxt",
+  //       url: "https://github.com/epfl-lara/rust-stainless",
+  //       favicon: "img/github.png",
+  //     },
+  //     {
+  //       name: "Inox",
+  //       url: "https://github.com/epfl-lara/inox",
+  //       favicon: "img/github.png",
+  //     },
+  //   ],
+  // },
   {
     id: "music",
     side: "right",
@@ -343,7 +343,7 @@ const bookmarks = [
   // },
 ];
 
-class VDOMNode { }
+class VDOMNode {}
 
 class VDOMElement extends VDOMNode {
   constructor(tagName, attributes = {}, children) {
