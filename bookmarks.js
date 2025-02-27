@@ -44,9 +44,9 @@ const bookmarks = [
         favicon: "img/favicons_016.png",
       },
       {
-        name: "Glance",
-        url: "http://glance.pi.local",
-        favicon: "img/glance.png",
+        name: "Wintermute Pi",
+        url: "http://pi.home",
+        favicon: "img/pi.svg",
       },
     ],
   },
