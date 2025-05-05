@@ -72,17 +72,12 @@ const bookmarks = [
       },
     ],
   },
-  // github("hermes", "Hermes", "informalsystems/hermes"),
   github("malachite", "Malachite", "informalsystems/malachite"),
-  github(
-    "quint-simulator",
-    "Quint Simulator",
-    "informalsystems/quint-simulator",
-  ),
+  github("quint", "Quint", "informalsystems/quint"),
   {
-    id: "hermes",
+    id: "informal",
     side: "left",
-    title: "Hermes",
+    title: "Informal",
     bookmarks: [
       {
         name: "hermes",
@@ -99,18 +94,7 @@ const bookmarks = [
         url: "https://github.com/cosmos/ibc-proto-rs",
         favicon: "img/github.png",
       },
-    ],
-  },
-  {
-    id: "cosmos",
-    side: "left",
-    title: "Cosmos",
-    bookmarks: [
-      {
-        name: "quint",
-        url: "https://github.com/informalsystems/quint",
-        favicon: "img/github.png",
-      },
+      spacer,
       {
         name: "itf-rs",
         url: "https://github.com/informalsystems/itf-rs",
@@ -121,12 +105,12 @@ const bookmarks = [
         url: "https://github.com/cosmos/ibc-rs",
         favicon: "img/github.png",
       },
-      spacer,
       {
         name: "ics23",
         url: "https://github.com/cosmos/ics23",
         favicon: "img/github.png",
       },
+      spacer,
       {
         name: "cosmos.nix",
         url: "https://github.com/informalsystems/cosmos.nix",
