@@ -109,6 +109,61 @@ a:hover {
   display: none;
 }
 
+#stats-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+#stats-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  max-height: 75vh;
+  overflow-y: auto;
+  min-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+#stats-content h2 {
+  margin: 0 0 14px;
+  font-size: 1em;
+  color: #666;
+}
+
+#stats-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+#stats-content th {
+  text-align: left;
+  padding: 4px 10px 6px;
+  color: #999;
+  font-weight: normal;
+  font-size: 0.85em;
+  border-bottom: 1px solid #eee;
+}
+
+#stats-content td {
+  padding: 5px 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+#stats-content tr.zero td {
+  color: #bbb;
+}
+
+#stats-content a {
+  color: #365aba;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background: rgb(50, 50, 50);
@@ -140,5 +195,32 @@ a:hover {
 
   #bookmarks a .count {
     color: #666;
+  }
+
+  #stats-content {
+    background: rgb(60, 60, 60);
+    color: #ddd;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  }
+
+  #stats-content h2 {
+    color: #aaa;
+  }
+
+  #stats-content th {
+    color: #888;
+    border-bottom-color: #555;
+  }
+
+  #stats-content td {
+    border-bottom-color: #444;
+  }
+
+  #stats-content tr.zero td {
+    color: #555;
+  }
+
+  #stats-content a {
+    color: #aac4f0;
   }
 }

@@ -533,3 +533,70 @@ const render = (container, vdom) => {
     container.replaceChildren(node);
   });
 };
+
+function buildUrlMap() {
+  const map = {};
+  for (const section of bookmarks) {
+    for (const bm of section.bookmarks) {
+      if (bm.type !== "spacer") {
+        map[bm.url] = { name: bm.name, section: section.title };
+      }
+    }
+  }
+  return map;
+}
+
+function showStatsModal() {
+  const existing = document.getElementById("stats-modal");
+  if (existing) {
+    existing.remove();
+    return;
+  }
+
+  const data = Clicks.get();
+  const urlMap = buildUrlMap();
+  const rows = Object.entries(urlMap)
+    .map(([url, { name, section }]) => ({ name, section, url, count: data[url] || 0 }))
+    .sort((a, b) => b.count - a.count);
+
+  const modal = $.div(
+    {
+      id: "stats-modal",
+      onclick: (e) => { if (e.target === e.currentTarget) e.currentTarget.remove(); },
+    },
+    $.div(
+      { id: "stats-content" },
+      $.h2({}, $.text("Stats")),
+      $.table(
+        {},
+        $.thead({},
+          $.tr({},
+            $.th({}, $.text("Bookmark")),
+            $.th({}, $.text("Section")),
+            $.th({}, $.text("Clicks")),
+          ),
+        ),
+        $.tbody({},
+          ...rows.map((row) =>
+            $.tr(
+              { class: row.count === 0 ? "zero" : "" },
+              $.td({}, $.a({ href: row.url }, $.text(row.name))),
+              $.td({}, $.text(row.section)),
+              $.td({}, $.text(String(row.count))),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+
+  document.body.appendChild(modal.render());
+}
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "?" && !e.ctrlKey && !e.metaKey && !e.altKey) {
+    showStatsModal();
+  } else if (e.key === "Escape") {
+    document.getElementById("stats-modal")?.remove();
+  }
+});
