@@ -1,119 +1,144 @@
-
 body {
-    background:                #efefef;
-    font-family:                -apple-system, Helvetica, Arial, sans-serif;
-    /* font-family:                monospace; */
-    color:                      #365aba;
-    margin:                     0px 0px 0px 0px;
-    padding:                    0px 0px 0px 20px;
-    zoom:                       87%;
-    overflow:                   hidden;
+  background: #efefef;
+  font-family: -apple-system, Helvetica, Arial, sans-serif;
+  /* font-family:                monospace; */
+  color: #365aba;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 20px;
+  zoom: 87%;
+  overflow: hidden;
 }
 
-body.large  { font-size:         16px; }
-body.medium { font-size:         14px; }
-body.small  { font-size:         12px; }
+body.large {
+  font-size: 16px;
+}
 
-a, a:hover {
-    color:                      #365aba;
-    text-decoration:            none;
+body.medium {
+  font-size: 14px;
+}
+
+body.small {
+  font-size: 12px;
+}
+
+a,
+a:hover {
+  color: #365aba;
+  text-decoration: none;
 }
 
 #bookmarks > div {
-    width:                      48%;
-    margin:                     0px 0px 30px 0px;
-    padding:                    0;
+  width: 48%;
+  margin: 0px 0px 30px 0px;
+  padding: 0;
 }
 
 #bookmarks > .left {
-    float:                      left;
+  float: left;
 }
 
 #bookmarks > .right {
-    float:                      right;
+  float: right;
 }
 
 #bookmarks section {
-    clear:                      both;
-    padding:                    8px 0px 0px 0px;
-    height:                     auto;
-    overflow:                   hidden;
+  clear: both;
+  padding: 8px 0px 0px 0px;
+  height: auto;
+  overflow: hidden;
 }
 
 #bookmarks h1 {
-    font-size:                  1em;
-    color:                      #666;
-    font-weight:                bold;
-    /* text-transform:             uppercase; */
-    padding-left:               8px;
+  font-size: 1em;
+  color: #666;
+  font-weight: bold;
+  /* text-transform:             uppercase; */
+  padding-left: 8px;
 }
 
 #bookmarks a {
-    position:                   relative;
-    display:                    inline-block;
-    vertical-align:             bottom;
-    text-decoration:            none;
-    font-size:                  0.9em;
-    font-weight:                normal;
-    letter-spacing:             0.02em;
-    line-height:                1.4;
-    background-color:           #FFF;
-    border-radius:              6px 6px 6px 6px;
-    box-shadow:                 0 1px 3px #CCC;
-    width:                      11em;
-    height:                     4em;
-    padding:                    10px 5px 5px 9px;
-    margin:                     2px 6px 6px 2px;
-    overflow:                   hidden;
-    text-overflow:              ellipsis;
-    position:                   relative;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  background-color: #fff;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 1px 3px #ccc;
+  width: 11em;
+  height: 4em;
+  padding: 10px 5px 5px 9px;
+  margin: 2px 6px 6px 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
 }
 
 #bookmarks a:hover {
-    background-color:           #FFDBA9;
+  background-color: #ffdba9;
 }
 
 #bookmarks a > img {
-    display:                    inline-block;
-    line-height:                20px;
-    margin-right:               7px;
-    margin-bottom:              -3px;
-    width:                      1.15em;
+  display: inline-block;
+  line-height: 20px;
+  margin-right: 7px;
+  margin-bottom: -3px;
+  width: 1.15em;
 }
 
 #bookmarks a.spacer {
-  visibility:                   hidden;
-  display:                      block;
-  height:                       0;
-  margin:                       0;
-  padding:                      0;
+  visibility: hidden;
+  display: block;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#bookmarks a .count {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 0.7em;
+  color: #aaa;
+}
+
+#bookmarks a .count:empty {
+  display: none;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background:                 rgb(50, 50, 50);
-    color:                      #999;
+    background: rgb(50, 50, 50);
+    color: #999;
   }
 
-  a, a:hover {
-    color:                      #DDD;
+  a,
+  a:hover {
+    color: #ddd;
   }
 
   #getstarted > section {
-    background-color:           #FFF;
+    background-color: #fff;
   }
 
   #bookmarks h1 {
-    font-size:                  0.9em;
-    color:                      #AAA;
+    font-size: 0.9em;
+    color: #aaa;
   }
 
   #bookmarks a {
-    background-color:           rgb(70, 70, 70);
-    box-shadow:                 0 1px 3px #333;
+    background-color: rgb(70, 70, 70);
+    box-shadow: 0 1px 3px #333;
   }
 
   #bookmarks a:hover {
-    background-color:           rgb(100, 100, 100);
+    background-color: rgb(100, 100, 100);
+  }
+
+  #bookmarks a .count {
+    color: #666;
   }
 }
