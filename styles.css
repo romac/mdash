@@ -149,6 +149,20 @@ a:hover {
   font-weight: normal;
   font-size: 0.85em;
   border-bottom: 1px solid #eee;
+  cursor: pointer;
+  user-select: none;
+}
+
+#stats-content th:hover {
+  color: #666;
+}
+
+#stats-content th.sort-asc::after {
+  content: " ▲";
+}
+
+#stats-content th.sort-desc::after {
+  content: " ▼";
 }
 
 #stats-content td {
