@@ -72,66 +72,94 @@ const bookmarks = [
       },
     ],
   },
-  github("malachite", "Malachite", "informalsystems/malachite"),
+  github("malachite", "Malachite", "circlefin/malachite"),
   {
-    id: "informal",
+    id: "chess",
     side: "left",
-    title: "Informal",
+    title: "Chess",
     bookmarks: [
       {
-        name: "Muppet",
-        url: "https://github.com/informalsystems/muppet",
-        favicon: "img/github.png",
+        name: "Lichess",
+        url: "https://lichess.org/",
+        favicon: "img/lichess.png",
       },
       {
-        name: "Quint",
-        url: "https://github.com/informalsystems/quint",
-        favicon: "img/github.png",
+        name: "Chess.com",
+        url: "https://www.chess.com/",
+        favicon: "img/chesscom.png",
       },
       {
-        name: "Hermes",
-        url: "https://github.com/informalsystems/hermes",
-        favicon: "img/github.png",
+        name: "Chessreps",
+        url: "https://www.chessreps.com",
+        favicon: "img/chessreps.ico",
       },
       spacer,
       {
-        name: "itf-rs",
-        url: "https://github.com/informalsystems/itf-rs",
-        favicon: "img/github.png",
+        name: "Chess Tempo",
+        url: "https://chesstempo.com/",
+        favicon: "img/chesstempo.png",
       },
-      {
-        name: "tendermint-rs",
-        url: "https://github.com/informalsystems/tendermint-rs",
-        favicon: "img/github.png",
-      },
-      {
-        name: "cometbft-rs",
-        url: "https://github.com/cometbft/cometbft-rs",
-        favicon: "img/github.png",
-      },
-      // {
-      //   name: "ibc-proto-rs",
-      //   url: "https://github.com/cosmos/ibc-proto-rs",
-      //   favicon: "img/github.png",
-      // },
-      // spacer,
-      // {
-      //   name: "ibc-rs",
-      //   url: "https://github.com/cosmos/ibc-rs",
-      //   favicon: "img/github.png",
-      // },
-      // {
-      //   name: "ics23",
-      //   url: "https://github.com/cosmos/ics23",
-      //   favicon: "img/github.png",
-      // },
-      // {
-      //   name: "cosmos.nix",
-      //   url: "https://github.com/informalsystems/cosmos.nix",
-      //   favicon: "img/github.png",
-      // },
     ],
   },
+  // {
+  //   id: "informal",
+  //   side: "left",
+  //   title: "Informal",
+  //   bookmarks: [
+  //     {
+  //       name: "Muppet",
+  //       url: "https://github.com/informalsystems/muppet",
+  //       favicon: "img/github.png",
+  //     },
+  //     {
+  //       name: "Quint",
+  //       url: "https://github.com/informalsystems/quint",
+  //       favicon: "img/github.png",
+  //     },
+  //     {
+  //       name: "Hermes",
+  //       url: "https://github.com/informalsystems/hermes",
+  //       favicon: "img/github.png",
+  //     },
+  //     spacer,
+  //     {
+  //       name: "itf-rs",
+  //       url: "https://github.com/informalsystems/itf-rs",
+  //       favicon: "img/github.png",
+  //     },
+  //     {
+  //       name: "tendermint-rs",
+  //       url: "https://github.com/informalsystems/tendermint-rs",
+  //       favicon: "img/github.png",
+  //     },
+  //     {
+  //       name: "cometbft-rs",
+  //       url: "https://github.com/cometbft/cometbft-rs",
+  //       favicon: "img/github.png",
+  //     },
+  //     {
+  //       name: "ibc-proto-rs",
+  //       url: "https://github.com/cosmos/ibc-proto-rs",
+  //       favicon: "img/github.png",
+  //     },
+  //     spacer,
+  //     {
+  //       name: "ibc-rs",
+  //       url: "https://github.com/cosmos/ibc-rs",
+  //       favicon: "img/github.png",
+  //     },
+  //     {
+  //       name: "ics23",
+  //       url: "https://github.com/cosmos/ics23",
+  //       favicon: "img/github.png",
+  //     },
+  //     {
+  //       name: "cosmos.nix",
+  //       url: "https://github.com/informalsystems/cosmos.nix",
+  //       favicon: "img/github.png",
+  //     },
+  //   ],
+  // },
   {
     id: "magazines",
     side: "right",
@@ -154,28 +182,28 @@ const bookmarks = [
       },
     ],
   },
-  {
-    id: "epfl-lara",
-    side: "left",
-    title: "EPFL LARA",
-    bookmarks: [
-      {
-        name: "Stainless",
-        url: "https://github.com/epfl-lara/stainless",
-        favicon: "img/github.png",
-      },
-      {
-        name: "Noxt",
-        url: "https://github.com/epfl-lara/rust-stainless",
-        favicon: "img/github.png",
-      },
-      {
-        name: "Inox",
-        url: "https://github.com/epfl-lara/inox",
-        favicon: "img/github.png",
-      },
-    ],
-  },
+  // {
+  //   id: "epfl-lara",
+  //   side: "left",
+  //   title: "EPFL LARA",
+  //   bookmarks: [
+  //     {
+  //       name: "Stainless",
+  //       url: "https://github.com/epfl-lara/stainless",
+  //       favicon: "img/github.png",
+  //     },
+  //     {
+  //       name: "Noxt",
+  //       url: "https://github.com/epfl-lara/rust-stainless",
+  //       favicon: "img/github.png",
+  //     },
+  //     {
+  //       name: "Inox",
+  //       url: "https://github.com/epfl-lara/inox",
+  //       favicon: "img/github.png",
+  //     },
+  //   ],
+  // },
   {
     id: "tools",
     side: "left",
@@ -270,33 +298,33 @@ const bookmarks = [
       },
     ],
   },
-  {
-    id: "science",
-    side: "right",
-    title: "Science",
-    bookmarks: [
-      {
-        name: "Terry Tao",
-        url: "http://terrytao.wordpress.com/",
-        favicon: "img/favicons_058.png",
-      },
-      {
-        name: "WIRED",
-        url: "http://www.wired.com/",
-        favicon: "img/favicons_020.png",
-      },
-      {
-        name: "Nature",
-        url: "http://www.nature.com/",
-        favicon: "img/nature.png",
-      },
-      {
-        name: "Phys.org",
-        url: "http://phys.org/weekly-news/",
-        favicon: "img/favicons_048.png",
-      },
-    ],
-  },
+  // {
+  //   id: "science",
+  //   side: "right",
+  //   title: "Science",
+  //   bookmarks: [
+  //     {
+  //       name: "Terry Tao",
+  //       url: "http://terrytao.wordpress.com/",
+  //       favicon: "img/favicons_058.png",
+  //     },
+  //     {
+  //       name: "WIRED",
+  //       url: "http://www.wired.com/",
+  //       favicon: "img/favicons_020.png",
+  //     },
+  //     {
+  //       name: "Nature",
+  //       url: "http://www.nature.com/",
+  //       favicon: "img/nature.png",
+  //     },
+  //     {
+  //       name: "Phys.org",
+  //       url: "http://phys.org/weekly-news/",
+  //       favicon: "img/favicons_048.png",
+  //     },
+  //   ],
+  // },
   {
     id: "fashion",
     side: "right",
